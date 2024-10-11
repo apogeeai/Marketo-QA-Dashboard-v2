@@ -1,0 +1,44 @@
+.checklist-section {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.checklist-section:last-child {
+    border-bottom: none;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.checklist-item label {
+    flex: 1;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.checklist-item input[type="checkbox"]:checked + label {
+    color: #6b7280;
+}
+
+.checklist-item input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #10B981;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.checklist-item input[type="checkbox"]:checked + label::after {
+    transform: scaleX(1);
+}
